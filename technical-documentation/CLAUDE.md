@@ -10,6 +10,12 @@
 - Use literal rather than figurative language.
 - Number steps in sequential processes.
 - Keep sentences under 25 words where possible.
+- Format content in Markdown.
+- Use "we" rather than "I" throughout.
+- Avoid contractions (use "do not" instead of "don't").
+- When explaining software processes, use pythonic pseudocode with 4-space indentation (not tabs).
+- For functions outside Python's native library, either clearly label their source (e.g., math.sqrt()) or create self-explanatory function names (e.g., compute_network_throughput()).
+- Do not include import statements in pseudocode unless explicitly clarifying package relationships.
 
 ## Emotional Tone
 - Maintain neutral, objective language.
@@ -17,14 +23,16 @@
 - Avoid expressing opinions - focus on facts and observed behaviors.
 - Be respectful of the reader's technical ability without being condescending.
 - Remove emotional language and hyperbole entirely.
+- Establish expertise through clarity and precision, rather than assertion.
 
 ## Document Structure
 - Begin with a clear purpose statement.
 - Include a table of contents for documents longer than 5 pages.
 - Organize content hierarchically with consistent heading levels.
 - Use descriptive headings that indicate content (not "Introduction" but "System Overview").
-- Employ numbered lists for sequential steps.
-- Use bulleted lists for non-sequential items.
+- Employ numbered lists only for sequential steps.
+- Use paragraphs rather than bullet points for explanations and descriptions.
+- Keep paragraphs short (2-3 sentences) to break up ideas into key concepts.
 - Include relevant code examples in separate, syntax-highlighted blocks.
 - Add meaningful captions to all diagrams, tables, and figures.
 
@@ -35,6 +43,8 @@
 - "Note: Important information about..."
 - "Warning: Potential issue that could..."
 - "The recommended approach is..."
+- "Based on our measurements..."
+- "The data indicates..."
 
 ## Phrases to Avoid
 - "Simply do X" (implies the task is easy, which may not be true for all users)
@@ -43,6 +53,7 @@
 - "It's easy to" (subjective judgment)
 - "Just" (minimizes complexity)
 - "A ton of" or "loads of" (imprecise)
+- "In the ever changing world of cloud networking" (cliché)
 
 ## Code Examples and Technical Elements
 - Include complete, working code examples that can be copied and used directly.
@@ -51,6 +62,48 @@
 - Show expected output or results where applicable.
 - Include error scenarios and troubleshooting guidance.
 - Use consistent formatting for code blocks, command line examples, file paths, and variables.
+- Support technical recommendations with data where possible.
+
+### Pythonic Pseudocode Example
+
+```python
+def validate_network_config(config_dict):
+    """Validates network configuration parameters.
+    
+    Args:
+        config_dict: Dictionary containing network configuration
+        
+    Returns:
+        tuple: (is_valid, list_of_errors)
+    """
+    errors = []  # Store validation errors
+    
+    # Check required parameters
+    required_params = ["ip_range", "subnet_mask", "gateway"]
+    for param in required_params:
+        if param not in config_dict:
+            errors.append(f"Missing required parameter: {param}")
+    
+    # Validate IP address format
+    if "ip_range" in config_dict:
+        ip = config_dict["ip_range"]
+        # Custom function with descriptive name instead of importing a library
+        if not is_valid_ipv4_address(ip):
+            errors.append(f"Invalid IP address format: {ip}")
+    
+    # Calculate network metrics
+    if not errors:
+        # Use clearly labeled external function
+        network_capacity = calculate_network_capacity(config_dict["subnet_mask"])
+        
+        # Standard library function with 4-space indentation for the loop
+        available_hosts = []
+        for i in range(network_capacity):
+            if i > 0 and i < network_capacity - 1:  # Skip network and broadcast addresses
+                available_hosts.append(i)
+    
+    return (len(errors) == 0, errors)
+```
 
 ## Examples
 ### Preferred:
@@ -68,7 +121,7 @@ database:
   ssl: true              # Enable SSL connection
 ```
 
-Note: For security reasons, we recommend storing the database password in the `DB_PASSWORD` environment variable rather than in the configuration file.
+Note: For security reasons, we recommend storing the database password in the `DB_PASSWORD` environment variable rather than in the configuration file. Our testing shows this approach reduces credential exposure by 87% compared to hardcoded passwords.
 
 To test the database connection:
 

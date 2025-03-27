@@ -9,6 +9,11 @@
 - Use informative headers that describe content rather than generic labels.
 - Maintain consistent terminology throughout - avoid synonyms for technical terms.
 - Use code formatting for all code examples, commands, file paths, and configuration elements.
+- Format content in Markdown.
+- Use "we" rather than "I" when referring to the project maintainers.
+- Avoid contractions in formal sections, but they can be used in more conversational sections.
+- When explaining software processes, use pythonic pseudocode with 4-space indentation (not tabs).
+- For functions outside Python's native library, either clearly label their source (e.g., math.sqrt()) or create self-explanatory function names (e.g., validate_network_configuration()).
 
 ## Emotional Tone
 - Project enthusiasm for the project without marketing hyperbole.
@@ -17,6 +22,7 @@
 - Acknowledge limitations or work-in-progress areas honestly.
 - Focus on problem-solving rather than self-promotion.
 - Express gratitude for contributions and community involvement.
+- Use analogies when they clarify complex concepts, but keep them relevant to technical users.
 
 ## Document Structure
 - Begin with a clear, concise project name and one-line description.
@@ -33,6 +39,8 @@
   - Contributing Guidelines
   - License Information
   - Acknowledgements
+- Use paragraphs rather than bullet points for explanations where appropriate.
+- Keep paragraphs short (2-3 sentences) to break up ideas into key concepts.
 
 ## Phrases to Use
 - "This project helps you..."
@@ -41,6 +49,8 @@
 - "You might find it useful when..."
 - "Contributions are welcome"
 - "For more details, see the [documentation]"
+- "Our measurements show..."
+- "Based on our testing..."
 
 ## Phrases to Avoid
 - "Best-in-class" or "industry-leading" (marketing language)
@@ -49,17 +59,76 @@
 - "Obviously" or "clearly" (presumptuous)
 - "Revolutionary" or "game-changing" (hyperbolic)
 - Excessive exclamation marks or all-caps emphasis
+- "In the ever changing world of cloud networks" (cliché)
 
 ## Visual Elements
 - Use descriptive alt text for all images and screenshots.
 - Include animated GIFs for demonstrating workflows where helpful.
 - Use syntax highlighting in code blocks with appropriate language tags.
 - Employ tables for comparing options or features.
-- Use diagrams for explaining architecture or complex workflows.
+- Use diagrams (such as Mermaid) for explaining architecture or complex workflows.
 - Consider light/dark mode compatibility for images.
 
 ## Examples
-### Preferred:
+
+### Pythonic Pseudocode Example
+
+```python
+def query_builder(table_name, conditions=None, fields=None, order_by=None, limit=None):
+    """Builds SQL queries with a chainable API.
+    
+    This is an example of the core functionality that would be described
+    in a GitHub README for a query builder library.
+    """
+    # Default to selecting all fields if none specified
+    selected_fields = "*"
+    if fields and len(fields) > 0:
+        selected_fields = ", ".join(fields)
+    
+    # Start building the base query
+    query = f"SELECT {selected_fields} FROM {table_name}"
+    
+    # Add WHERE conditions if provided
+    if conditions and len(conditions) > 0:
+        where_clauses = []
+        params = []
+        
+        for field, operator, value in conditions:
+            where_clauses.append(f"{field} {operator} ?")
+            params.append(value)
+        
+        query += " WHERE " + " AND ".join(where_clauses)
+    
+    # Add ORDER BY if specified
+    if order_by:
+        field, direction = order_by
+        query += f" ORDER BY {field} {direction}"
+    
+    # Add LIMIT if specified
+    if limit and limit > 0:
+        query += f" LIMIT {limit}"
+    
+    return query, params
+
+# Example usage - showing how the API would work
+def example_usage():
+    # Build a query to find active users, showing the chainable approach
+    query, params = query_builder(
+        table_name="users",
+        fields=["id", "name", "email"],
+        conditions=[("status", "=", "active"), ("last_login", ">", "2023-01-01")],
+        order_by=("created_at", "DESC"),
+        limit=10
+    )
+    
+    # This would produce:
+    # SELECT id, name, email FROM users WHERE status = ? AND last_login > ? ORDER BY created_at DESC LIMIT 10
+    # params: ["active", "2023-01-01"]
+    
+    return query, params
+```
+
+### Preferred README Format:
 ```markdown
 # Query Builder
 
@@ -94,7 +163,11 @@ const { sql, parameters } = query.toSQL();
 // parameters: ['active']
 ```
 
+The query builder acts like a pipeline for your database operations. Much like water flowing through connected pipes, your data request flows through a chain of query components until it produces the exact SQL you need.
+
 ## Features
+
+Our performance testing shows Query Builder processes complex joins 37% faster than similar libraries, while using 28% less memory.
 
 - Type-safe query building with TypeScript support
 - Protection against SQL injection
