@@ -1,59 +1,74 @@
 # AI Tone Guides Collection
 
-This repository contains a collection of structured tone guides for AI prompting. Each guide is designed to help AI systems generate content in a specific style, format, and tone appropriate for different contexts.
+Practical tone guides for modern LLM workflows. They are designed to produce output that is clear, low-hype, inclusive, and cost-efficient to generate.
 
-## Purpose
+## What changed in this refresh
 
-These tone guides serve as explicit instructions for Large Language Models (LLMs) to:
+This repository now assumes current LLM capabilities (2026-era models):
 
-1. Maintain consistent writing style across similar documents
-2. Adapt appropriately to different content contexts
-3. Follow best practices for each document type
-4. Avoid common writing pitfalls and problematic language
+1. Models are strong at structure and rewriting, so prompts should be explicit and compact.
+2. Token cost matters, so output length and context size are treated as first-class constraints.
+3. Inclusive language is not optional; it is part of quality, not a nice-to-have.
+4. Tone should be plain-spoken and specific: calm confidence, concrete examples, no marketing noise.
 
-## Available Tone Guides
+## Repository-wide defaults
 
-### [Blog Writing](/blog/CLAUDE.md)
-Guidelines for creating conversational, accessible blog content that maintains a friendly but professional tone. Focuses on clarity, active voice, and avoiding overly academic language.
+Use these rules with every guide in this repo.
 
-### [Professional Emails](/email/CLAUDE.md)
-Framework for crafting concise, effective business emails that respect the recipient's time while clearly communicating purpose and next actions.
+### 1) Output contract
 
-### [Slide Decks](/slide-decks/CLAUDE.md)
-Instructions for creating presentation content that follows best practices for brevity, visual organization, and audience engagement.
+- Lead with the answer or outcome.
+- Keep response length proportional to the ask.
+- Prefer short paragraphs over long bullet-heavy blocks.
+- Avoid repeating the prompt back to the user.
+- State uncertainty directly instead of padding.
 
-### [Strategy Documents](/strategy-documents/CLAUDE.md)
-Guidance for developing formal business strategy content that balances detail with clarity, using evidence-based statements and appropriate structure.
+### 2) Token efficiency
 
-### [Social Media (LinkedIn Focus)](/social-media/CLAUDE.md)
-Directions for crafting professional LinkedIn posts that demonstrate thought leadership while encouraging engagement and avoiding promotional clichés.
+- Set a target length before generation (for example: 120 words, 5 bullets, 1 table).
+- Include only required context in the prompt; do not paste large irrelevant source text.
+- Reuse stable templates and section headings rather than regenerating structure each time.
+- Ask for one draft, then one focused revision pass; avoid multi-pass churn.
+- Prefer small examples over long synthetic examples unless the task explicitly needs depth.
 
-### [Technical Documentation](/technical-documentation/CLAUDE.md)
-Framework for writing precise, objective technical content that prioritizes accuracy, clarity, and usability.
+### 3) Inclusive language recommendations
 
-### [User Guides & Tutorials](/user-guides/CLAUDE.md)
-Guidance for creating instructional content that is accessible, supportive, and structured for progressive learning.
+- Use people-first language unless a community clearly prefers identity-first wording.
+- Default to gender-neutral terms (`they`, `everyone`, `team`, `folks`).
+- Avoid assumptions about culture, age, disability, religion, family structure, or background.
+- Prefer global plain wording over region-specific idioms.
+- Describe access requirements, not personal traits.
 
-### [GitHub READMEs](/github-readmes/CLAUDE.md)
-Specific instructions for crafting effective open-source project documentation that helps users and potential contributors quickly understand and engage with a repository.
+Common replacements:
 
-## How to Use These Guides
+| Avoid | Prefer |
+|---|---|
+| guys | everyone / team |
+| manpower / man-hours | effort / staffing / person-hours |
+| sanity check | quick check / sense check |
+| normal user | typical user / most users |
+| blacklist / whitelist | denylist / allowlist |
+| master/slave | primary/secondary or protocol-specific terms |
 
-1. Select the appropriate guide for your content type
-2. Include the guide content in your prompts to AI systems
-3. Adjust specific elements as needed for your particular use case
-4. Consider combining elements from multiple guides for hybrid content types
+## Available tone guides
+
+- [Blog Writing](/blog/CLAUDE.md)
+- [Professional Emails](/email/CLAUDE.md)
+- [Slide Decks](/slide-decks/CLAUDE.md)
+- [Strategy Documents](/strategy-documents/CLAUDE.md)
+- [Social Media (LinkedIn Focus)](/social-media/CLAUDE.md)
+- [Technical Documentation](/technical-documentation/CLAUDE.md)
+- [User Guides & Tutorials](/user-guides/CLAUDE.md)
+- [GitHub READMEs](/github-readmes/CLAUDE.md)
+
+## Recommended prompt pattern
+
+1. **Task:** what to produce.
+2. **Audience:** who it is for and what they already know.
+3. **Guide:** paste the relevant `CLAUDE.md`.
+4. **Token budget:** max words/sections/examples.
+5. **Quality checks:** factual accuracy, inclusive language, and actionability.
 
 ## Customisation
 
-These guides are starting points and can be customised to reflect:
-
-- Brand voice specifics
-- Industry terminology requirements
-- Audience expertise level
-- Document length constraints
-- Regional language variations
-
-## Contribution
-
-Feel free to expand this collection with additional tone guides or refine existing ones based on your experience with AI content generation.
+Adapt these guides for domain terminology, regulatory constraints, and audience expertise, while keeping the shared efficiency and inclusion rules intact.

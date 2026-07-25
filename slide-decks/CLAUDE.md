@@ -1,71 +1,49 @@
 # Slide Deck Tone Guide
 
-## Style Elements
-- Use UK English spellings and grammar.
-- Embrace brevity - use 30 words or fewer per slide when possible.
-- Use bullet points only where needed for clarity and conciseness.
-- Employ the "6x6 rule" - no more than 6 bullet points per slide, no more than 6 words per bullet.
-- Use clear, jargon-free language except when industry terminology is expected.
-- Maintain consistent terminology throughout the presentation.
-- Use plain text formatting to allow for custom visual styling in presentation software.
-- Avoid contractions in formal presentations (use "we are" instead of "we're").
-- Use "we" rather than "I" to represent your organization or team.
+## Core voice
 
-## Emotional Tone
-- Project confidence without arrogance.
-- Be authoritative but approachable.
-- Maintain professionalism while engaging the audience.
-- Use a measured tone that avoids hyperbole or excessive claims.
-- Build trust through data-driven statements and precise language.
+- Use UK English.
+- Be concise, concrete, and evidence-led.
+- Keep language plain and confident.
+- Use `we` for team or organisation voice.
+- Avoid hype and inflated claims.
 
-## Phrases to Use
-- "Our analysis shows..."
-- "The data indicates..."
-- "Key takeaways include..."
-- "To summarize..."
-- "This matters because..."
-- "Our measurements demonstrate..."
+## Token-efficient generation rules
 
-## Phrases to Avoid
-- "As you can see" (assume they can)
-- "Obviously" or "clearly" (could make audience feel unintelligent)
-- "I think" or "I believe" (undermines authority)
-- "Game-changing" or "revolutionary" (overused buzzwords)
-- "To be honest" (implies dishonesty elsewhere)
-- "In the ever changing world of cloud computing" (cliché)
+- Generate one slide at a time when iterating.
+- Default target: 15-30 words per content slide.
+- One idea per slide; avoid multi-theme slides.
+- Limit bullet lists to key points only.
+- Prefer data visuals over text explanations when possible.
+
+## Inclusive language recommendations
+
+- Avoid language that assumes vision, hearing, or prior context.
+- Replace "As you can see" with "This chart shows".
+- Use neutral audience terms (`everyone`, `team`, `colleagues`).
+- Avoid exclusionary terms and idioms that do not travel globally.
+- Include alt text and spoken-description notes for key visuals.
 
 ## Structure
-- Title slide with clear purpose statement
-- Agenda slide outlining key sections
-- Content slides with clear section headers
-- One idea per slide
-- Visual supporting data when relevant
-- Summary slide with key takeaways
-- Call to action or next steps
 
-## Visual Style
-- Use minimal text with supporting visuals
-- Employ data visualization instead of tables where possible
-- Maintain consistent font sizes (titles: 32pt+, body text: 24pt+)
-- Use high contrast colors for readability
-- Include white space to prevent cluttered slides
-- Support key points with specific data and statistics
+1. Title and purpose
+2. Agenda (for longer decks)
+3. Main sections (one idea per slide)
+4. Evidence slide(s)
+5. Summary
+6. Next steps
 
-## Examples
-### Preferred:
-"Title: Q3 Cloud Network Performance
+## Visual and wording guidance
 
-Network latency reduced 24% since Q2
+- Use clear section headers.
+- Keep terminology consistent.
+- Use high contrast, large text, and white space.
+- Add source notes for data points.
+- Use direct phrasing: "The data indicates...", "This matters because..."
 
-Average response time now 42ms (vs 55ms)
+## Phrases to avoid
 
-Increased encryption strength with minimal overhead
-
-Cost reduction of £2,700/month
-
-Next phase: API gateway optimization"
-
-### Avoid:
-"Title: An Analysis and Deep Dive into the Third Quarter Cloud Networking Performance Metrics and Results
-
-As you can see from these figures, we have obviously made some incredible progress in our revolutionary new network optimization strategy which has clearly led to a dramatic and game-changing improvement in numerous performance metrics across multiple datacenter regions. Furthermore, our encryption protocols have likewise shown significant improvements in terms of strength-to-performance ratios which have increased substantially during this quarter..." (text continues beyond slide boundaries)
+- "As you can see"
+- "Obviously", "clearly"
+- "Game-changing", "revolutionary"
+- "In the ever changing world of..."
