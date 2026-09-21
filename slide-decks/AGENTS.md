@@ -1,26 +1,22 @@
 # Slide Deck Tone Guide
 
-A slide is a visual aid, not a document with a projector. If the deck reads fine without
-a presenter, it's a document. Send that instead and give everyone their hour back.
+Read [the common guide](../common/AGENTS.md) first. This file only covers what's specific
+to decks.
 
-Read [the blog guide](../blog/AGENTS.md) for the voice. Decks keep the plainness and lose
-the anecdotes.
+A slide is a visual aid, not a document with a projector. If the deck reads fine without a
+presenter, it's a document. Send that instead and give everyone their hour back.
 
-## Core voice
+## What changes
 
-- Use UK English.
-- Concrete and evidence-led. Numbers with sources.
-- Plain and confident. No hype, no inflated claims.
-- Use `we` for team or organisation voice.
+- Use `we` for team or organisation voice. The first-person anecdotes go in the talk, not on the slide.
+- Evidence-led throughout. Numbers with sources.
+- Humour lives in the delivery. Keep the slides straight.
 - Understatement still works. "This didn't go to plan" beats a slide titled "Challenges".
 
 ## Length
 
 15-30 words per content slide. One idea per slide. If a slide has two themes, it's two
 slides.
-
-Generate one slide at a time when iterating - it keeps the ideas separate and saves
-rewriting the whole deck to fix one.
 
 ## Structure
 
@@ -40,31 +36,24 @@ rewriting the whole deck to fix one.
 - Use white space. A crowded slide is a slide nobody reads.
 - Put the detail in speaker notes or an appendix, not on the slide.
 
-## Inclusive language
+## Inclusive language additions
 
-A deck is presented live, which means some people are listening rather than reading, and
-some are reading rather than listening. Write for both.
+The [common baseline](../common/AGENTS.md#inclusive-language) applies. A deck is presented
+live, so some people are listening rather than reading and some are reading rather than
+listening. Write for both.
 
-- Use gender-neutral language by default (`they`, `everyone`, `colleagues`, `team`).
-- Never say "as you can see". Say "this chart shows", then say what it shows. It's better for anyone not looking at the screen, and better for the people at the back.
-- Don't assume vision, hearing, prior context, or attendance at earlier sessions.
-- Use high contrast and large text. Don't rely on colour alone to distinguish data series - use labels, patterns, or direct annotation.
-- Write alt text for every meaningful visual, and put a spoken description in the speaker notes.
+- Never say "as you can see". Say "this chart shows", then say what it shows. Better for anyone not looking at the screen, and better for the people at the back.
+- Don't assume attendance at earlier sessions or prior context.
+- Use high contrast and large text. Don't distinguish data series by colour alone - use labels, patterns, or direct annotation.
+- Put a spoken description of every meaningful visual in the speaker notes, not just alt text in the file.
 - Caption or transcribe embedded video.
-- Avoid idiom, sport metaphors, and culture-specific references. Remote and international audiences miss them.
-- Use neutral audience terms and neutral example names.
-- Describe barriers and design choices, not personal traits or deficits.
 - Check stock imagery for lazy stereotyping before it goes in.
 
 | Avoid | Prefer |
 |---|---|
 | As you can see | This chart shows |
-| guys, ladies and gentlemen | everyone, team, colleagues |
+| ladies and gentlemen | everyone, team, colleagues |
 | the red line shows | the line labelled *Region A* shows |
-| manpower | effort, staffing |
-| sanity check | sense check |
-| blacklist/whitelist | denylist/allowlist |
-| crazy numbers | unexpected numbers |
 
 ## Phrases to use
 
@@ -75,8 +64,7 @@ some are reading rather than listening. Write for both.
 
 ## Phrases to avoid
 
+Beyond the [common list](../common/AGENTS.md#phrases-to-avoid):
+
 - "As you can see"
-- "Obviously", "clearly", "simply"
-- "Game-changing", "revolutionary", "best-in-class"
 - "Any questions?" as the final slide - end on the next step
-- "In the ever changing world of..."

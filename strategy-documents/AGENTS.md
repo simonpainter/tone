@@ -1,18 +1,17 @@
 # Strategy Document Tone Guide
 
+Read [the common guide](../common/AGENTS.md) first. This file only covers what's specific
+to strategy documents.
+
 Strategy documents fail in one of two ways: they're vague enough that nobody can disagree,
 or they're confident about things nobody has measured. Say what you know, say what you're
 assuming, and keep those two things apart.
 
-Read [the blog guide](../blog/AGENTS.md) for the voice. Strategy docs are more formal but
-still plain-spoken.
+## What changes
 
-## Core voice
-
-- Use UK English.
-- Precise, practical, evidence-led.
-- Clear declarative sentences. Active voice for decisions and actions.
 - Use `we` for organisational recommendations.
+- Clear declarative sentences. Active voice for decisions and actions.
+- Drop the humour and the anecdotes. Keep the plain wording.
 - Confidence tied to data. Where there's no data, say so.
 
 ## Structure
@@ -32,37 +31,28 @@ never get past it - that's not a failure of theirs, it's the job of the summary.
 
 - Scope each section to a decision, not a background essay. Appendices exist for depth.
 - Use tables for options, trade-offs, costs, and risks.
-- Quantify claims. "Significant saving" means nothing; "£40k a year" means something.
-- Separate observed facts from assumptions, and label the assumptions.
 - State the known unknowns explicitly, along with what would resolve them.
 - Define terms and acronyms on first use.
 - Don't repeat the same rationale in three sections. Say it once and reference it.
 - Name the option you rejected and why. A recommendation without alternatives isn't a recommendation.
 
-## Inclusive language
+## Inclusive language additions
 
-Strategy documents decide what gets built and who it gets built for. Careless framing here
-turns into exclusion downstream, which is expensive to unpick later.
+The [common baseline](../common/AGENTS.md#inclusive-language) applies. Strategy documents
+decide what gets built and who it gets built for, so careless framing here turns into
+exclusion downstream, which is expensive to unpick later.
 
-- Use gender-neutral language by default (`they`, `stakeholders`, `the team`).
 - Don't assume things about user groups, teams, markets, or regions. Say what evidence you have about them.
 - Use neutral role and seniority terms. Don't equate job title with capability.
-- Describe impacted groups specifically and respectfully. "Users on low-bandwidth connections", not "less sophisticated users".
-- Avoid deficit framing. The problem is usually the barrier or the design choice, not the person. "The current flow requires a desktop browser" beats "users lack the right equipment".
-- Use people-first language unless a group clearly prefers identity-first.
+- Describe impacted groups specifically. "Users on low-bandwidth connections", not "less sophisticated users".
 - Treat accessibility and inclusion as requirements with costs and metrics, not as a risk to accept later. Retrofitting costs more.
-- Prefer globally clear wording. Avoid idiom and culture-specific references in documents that travel.
 
 | Avoid | Prefer |
 |---|---|
-| manpower, man-hours, headcount as people | effort, staffing, person-hours, roles |
+| headcount (as people) | roles, staffing |
 | the disabled, disabled users | people with disabilities, disabled people (check preference) |
 | non-technical users | users without a technical background |
-| normal user, standard customer | typical user, most customers |
-| blacklist/whitelist | denylist/allowlist |
 | master plan | overall plan, programme plan |
-| sanity check | sense check, validation |
-| grandfathered | legacy status |
 
 ## Phrases to use
 
@@ -75,8 +65,5 @@ turns into exclusion downstream, which is expensive to unpick later.
 
 ## Phrases to avoid
 
-- "Best-in-class", "world-class", "groundbreaking", "industry-leading"
-- "Leverage", "synergy", "paradigm shift", "north star"
-- "Obviously", "clearly", "simply"
-- "Future-proof" - nothing is
-- "In the ever changing world of..."
+Beyond the [common list](../common/AGENTS.md#phrases-to-avoid), watch for `north star`,
+`strategic imperative`, `operating model` used as filler, and `at pace`.

@@ -1,16 +1,17 @@
 # GitHub README Tone Guide
 
-A README has about fifteen seconds to answer two questions: what is this, and does it
-solve my problem? Everything else is a bonus. Read [the blog guide](../blog/AGENTS.md) for
-the voice.
+Read [the common guide](../common/AGENTS.md) first. This file only covers what's specific
+to READMEs.
 
-## Core voice
+A README has about fifteen seconds to answer two questions: what is this, and does it solve
+my problem? Everything else is a bonus.
 
-- Use UK English.
-- Direct and technically accurate. Written for someone scanning, not reading.
-- Lead with what it does and who it's for.
+## What changes
+
+- Written for someone scanning, not reading.
+- Use `we` for maintainer voice, or `I` for a personal project. Pick one and stick to it.
+- Humour survives in the prose. Keep it out of the setup instructions.
 - Confidence grounded in evidence. No marketing claims.
-- Use `we` for maintainer voice, or `I` for a personal project - pick one and stick to it.
 
 ## Length
 
@@ -37,43 +38,30 @@ cases into linked docs rather than bloating the file.
 - Use compact tables for feature and compatibility matrices.
 - Use headings that describe content. `Configuration`, not `Stuff`.
 - Keep badges to ones that mean something. A row of decorative shields is noise.
-- If there's a diagram, give it alt text and a prose summary.
 
-## Inclusive language
+## Inclusive language additions
 
-READMEs are read globally, by people at every level of experience, often translated by a
-browser. Plain and neutral wording isn't a nicety here - it's what makes the project usable.
+The [common baseline](../common/AGENTS.md#inclusive-language) applies. READMEs are read
+globally, by people at every level of experience, often through a browser translator. Plain
+neutral wording is what makes the project usable, not a nicety.
 
-- Use gender-neutral language by default (`they`, `contributors`, `maintainers`).
 - Use neutral role language: `maintainer`, `contributor`, `operator`, `reviewer`.
-- Don't assume reader expertise, hardware, operating system, region, or connection speed.
-- Never minimise effort. Cut `just`, `simply`, `easy`, `trivial`, and `obviously`. "Easy to use" without evidence is a claim, not a description.
-- Use people-first language unless a group clearly prefers identity-first.
-- Prefer globally clear wording. Avoid idiom, slang, and in-jokes in the setup instructions - keep the personality for the prose.
-- Use descriptive alt text on every image, badge group, and diagram.
-- Use descriptive link text. "See the configuration reference", not "click here".
+- Don't assume reader expertise, operating system, hardware, region, or connection speed.
+- "Easy to use" without evidence is a claim, not a description.
+- Keep the personality in the prose and out of the install steps. In-jokes in a setup command are a barrier.
+- Give badge groups alt text, and use descriptive link text throughout.
 - Keep the code of conduct and contributing guidance welcoming and specific about how to ask for help.
-- Use neutral placeholder names and example data.
 
 | Avoid | Prefer |
 |---|---|
 | master (branch) | main |
-| master/slave | primary/secondary, leader/follower |
-| blacklist/whitelist | denylist/allowlist, blocklist/allowlist |
-| sanity check | validation check |
-| dummy value | placeholder value |
-| guys, dudes | everyone, contributors |
-| simply run, just install | run, install |
 | native speakers | fluent speakers |
-| he, she (generic) | they |
-
-Where an upstream API or config key still uses old terminology, keep the exact key in the
-code block and use the neutral term in the surrounding prose.
+| easy to use | (state what it does, with evidence) |
 
 ## Phrases to avoid
 
-- "Best-in-class", "industry-leading", "revolutionary", "blazing fast" without a benchmark
-- "Simply", "just", "obviously", "clearly"
+Beyond the [common list](../common/AGENTS.md#phrases-to-avoid):
+
+- "Blazing fast" without a benchmark
 - "Easy to use" with nothing to back it
 - "Batteries included" and similar idiom
-- "In the ever changing world of..."
