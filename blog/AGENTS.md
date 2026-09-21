@@ -1,8 +1,12 @@
 # Blog Writing Tone Guide
 
 Read [the common guide](../common/AGENTS.md) first. It carries the voice, the inclusive
-language baseline, and the banned phrases. This file only covers what's specific to blog
-posts.
+language baseline, and the banned phrases. This file only covers language choices specific
+to blog posts.
+
+This is about how a post reads, not how a site is built. Tagging rules, frontmatter fields,
+truncate markers, and file layout belong in the blog repo's own instructions, because
+they're plumbing rather than language.
 
 Blog writing is where the common voice runs at full strength: first person throughout,
 humour allowed, opinions landed rather than hedged.
@@ -25,24 +29,25 @@ Openings that don't:
 - "Network latency is the time it takes for a packet to travel from source to destination."
 - "In this post, we will explore..."
 
-## Structure
+The first paragraph is doing the most work in the whole post. If a reader can't tell what
+they're getting from it, they've already gone.
 
-- `##` for major sections, `###` for subsections.
-- Keep the intro to 2-4 sentences before the `<!-- truncate -->` marker.
-- Use subheadings every 2-4 paragraphs.
+## Shape
+
+- Keep the intro to 2-4 sentences. Say what the post is about and why it's worth reading, then move.
+- Use subheadings every 2-4 paragraphs. Write them as statements where you can - "Latency doubles across regions" tells a skim-reader more than "Results".
 - Don't lean on bullet points. Explain in prose; save lists for things that are genuinely a list.
-- Target 600-1,200 words unless the topic needs more.
-- Frontmatter carries title, authors, tags, and date.
+- Target 600-1,200 words unless the topic needs more. Length should follow the argument, not a word count.
 
 ## Technical explanation
 
 - Name the jargon, then give the plain-English gist immediately. "BGP (Border Gateway Protocol) is the routing protocol that powers the internet."
 - Use real, runnable code - PowerShell, Python, YAML, whatever fits. Not decorative pseudocode.
 - When pseudocode genuinely helps, write it Pythonic with 4-space indentation. Label anything outside the standard library (`math.sqrt()`) or give it a self-explanatory name (`calculate_network_latency()`).
-- Use Mermaid diagrams where they cut explanation text.
+- Use diagrams where they cut explanation text, not as decoration.
 - Use tables for comparative data. Keep them terse and numeric.
 - Use blockquotes for "for the curious" side-notes that would otherwise break the flow.
-- Back claims with specific numbers wherever possible.
+- Back claims with specific numbers wherever possible, and say where the numbers came from.
 
 ## How to end
 
@@ -61,23 +66,7 @@ What an ending shouldn't do is restate the post. Examples that land:
 
 The [common baseline](../common/AGENTS.md#inclusive-language) applies. On top of it:
 
-- Link to my own earlier posts rather than assuming the reader followed a series.
+- Link to earlier posts rather than assuming the reader followed a series. Anyone can arrive at any post from a search result.
+- Don't assume shared industry history. "Back when we all ran Frame Relay" excludes most of the audience.
 - Where a post covers accessibility or inclusion, cite the specific standard or test rather than speaking in generalities.
 - Opinion posts get more latitude on strong views, none on stereotyping.
-
-## Tagging
-
-Every post gets **at most 3 tags**, all of which must already exist in `blog/tags.yml`.
-
-Drop these first when trimming, because they're too generic to filter anything useful:
-`networks`, `cloud`, `security`, `architecture`.
-
-Favour tags in this order:
-
-1. Technology-specific: `dns`, `bgp`, `expressroute`, `private-link`, `terraform`, `ipv6`, `anycast`, `mcp`, `firewall`, `zero-trust`, `ospf`, `dhcp`, `sdwan`, `load-balancing`, `high-availability`, `performance`, `troubleshooting`, `monitoring`, `cicd`, `github-actions`, `docusaurus`, `ai`, `algorithms`, `routing-protocols`, `netbox`, `enforza`, `nfc`, `making`
-2. Generic tools: `python`, `bash`, `programming`, `scripting`, `automation`, `github`
-3. Platform: `azure`, `aws`
-4. Content type: `opinion`, `educational`, `labs`, `personal`
-5. Catch-all: `business`, `career`, `documentation`, `migration`
-
-Don't invent a tag without adding it to `blog/tags.yml` too.

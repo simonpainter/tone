@@ -20,7 +20,7 @@ read one file, read the common one.
 
 | Guide | What it's for |
 |---|---|
-| [Blog writing](blog/AGENTS.md) | Posts, openings, Mermaid diagrams, tagging |
+| [Blog writing](blog/AGENTS.md) | Openings, shape, explaining technical things, endings |
 | [Professional email](email/AGENTS.md) | Short, one ask, explicit deadlines |
 | [Slide decks](slide-decks/AGENTS.md) | One idea per slide, spoken descriptions |
 | [Strategy documents](strategy-documents/AGENTS.md) | Options, trade-offs, labelled assumptions |
